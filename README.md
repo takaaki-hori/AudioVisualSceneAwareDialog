@@ -1,5 +1,14 @@
 # Audio Visual Scene-aware Dialog (AVSD) example for DSTC7
 
+This system was impletemented for AVSD at DSTC7 where the naive fusion apporoach bewteen audio and visula features in the following paper was realized by translated from Chainer to PyTorch. 
+
+      @article{hori2018end,
+        title={End-to-End Audio Visual Scene-Aware Dialog using Multimodal Attention-Based Video Features},
+        author={Hori, Chiori and Alamri, Huda and Wang, Jue and Winchern, Gordon and Hori, Takaaki and Cherian, Anoop and Marks, Tim K and Cartillier, Vincent and Lopes, Raphael Gontijo and Das, Abhishek and others},
+        journal={arXiv preprint arXiv:1806.08409},
+        year={2018}
+      }
+
 ## Required packages
 
 - python 2.7
@@ -7,6 +16,10 @@
 - numpy
 - six
 - java 1.8.0   (for coco-evaluation tools)
+
+## DSTC7 AVSD track data links
+
+   https://github.com/hudaAlamri/DSTC7-Audio-Visual-Scene-Aware-Dialog-AVSD-Challenge
 
 ## How to run the code:
 
@@ -16,9 +29,9 @@
       - `test_set4DSTC7-AVSD.json` (official test set. this file does not include groundtruth at this moment)
       - `test_set.json`  (prototype test set used for tentative evaluation)
  
-   2. Obtain the feature data and extract files under `data/charades_features/`.
-      - `i3d_rgb`, `i3d_flow`, `vggish`  (train and validation sets)
-      - `i3d_rgb_testset`, `i3d_flow_testset`, `vggish_testset` (official test sets)
+   2. Make directory `data/charades_features` and extract files under the directory from downloaded feature packages:
+      - `i3d_rgb.tgz`, `i3d_flow.tgz`, `vggish.tgz`  (train and validation sets)
+      - `i3d_rgb_testset.tgz`, `i3d_flow_testset.tgz`, `vggish_testset.tgz` (official test sets)
 
    3. Run `run_i3d.sh` to train and test the network, that uses `i3d_rgb` and `i3d_flow` features. (`run_i3d+vggish.sh` is another example that further uses `vggish` features)
 
@@ -31,7 +44,7 @@
 
 ## Result:
 
-The following results were obtained for the official validation set by using `run_i3d.sh`.
+The following results were obtained for the prototype test set by using `run_i3d.sh`.
 
 | METRIC | RESULT |
 | ------ | -------|
