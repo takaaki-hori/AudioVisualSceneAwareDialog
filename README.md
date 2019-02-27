@@ -1,6 +1,18 @@
 # Audio Visual Scene-aware Dialog (AVSD) example for DSTC7
 
-This system was impletemented for AVSD at DSTC7 where the naive fusion apporoach bewteen audio and visula features in the following paper was realized by translated from Chainer to PyTorch. 
+This is an implementation of the naive fusion of audio and video features targeted at the AVSD Challenge at DSTC7. Details of our scheme are in the following paper. While, the results in paper used a Chainer implementation of the system, the provided code is in PyTorch (translated from Chainer).
+
+Please cite the paper for the baseline system:
+
+        @inproceedings{alamri@DSTC7,
+                title={Audio Visual Scene-aware dialog (AVSD) Track for Natural Language Generation in DSTC7},
+                author={Huda Alamri and Chiori Hori and Tim K. Marks and Dhruv Batra and Devi Parikh},
+                booktitle={DSTC7 at AAAI2019 Workshop},
+                year={2018}
+        }
+
+Please cite the paper for attentional multimoda fusion.
+https://arxiv.org/abs/1806.08409
 
       @article{hori2018end,
         title={End-to-End Audio Visual Scene-Aware Dialog using Multimodal Attention-Based Video Features},
@@ -44,7 +56,8 @@ This system was impletemented for AVSD at DSTC7 where the naive fusion apporoach
 
 ## Result:
 
-The following results were obtained for the prototype test set by using `run_i3d.sh`.
+The following results were obtained for the "prototype" test set by using `run_i3d.sh`.
+
 
 | METRIC | RESULT |
 | ------ | -------|
